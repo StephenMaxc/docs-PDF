@@ -2,7 +2,7 @@ site:
   title: Mech-Mind Documentation
 content:
   sources: 
-  - url: D:\文档维护\docs-PDF
+  - url: https://github.com/StephenMaxc/docs-PDF.git
     start_path: src
 ui:
   bundle:
@@ -10,8 +10,8 @@ ui:
     snapshot: true
 antora:
   extensions:
-    - require: '@antora/lunr-extension'
-      languages: [en]
+    # - require: '@antora/lunr-extension'
+    #   languages: [en]
     - '@antora/pdf-extension'
 asciidoc:
   attributes:
@@ -38,7 +38,7 @@ output:
   # dir: ./build/zh
   # destinations:
   # - provider: fs
-  #   path: ./build/zh
+  #   path: ./build/en
   #   clean: true
   # - provider: archive
   #   path: ./build/zh.zip

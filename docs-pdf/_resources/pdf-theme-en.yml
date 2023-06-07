@@ -13,7 +13,6 @@ font:
       italic: Roboto-LightItalic.ttf
       bold_italic: Roboto-Italic.ttf
   fallbacks:
-  - Arial
   - Noto Serif
   - Helvetica
   - Courier

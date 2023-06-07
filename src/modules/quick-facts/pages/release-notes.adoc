@@ -46,7 +46,7 @@ The Classification module is optimized, which leads to faster training convergen
 
 ==== Optimized the Setting of Defect Determination Rule
 
-The Defect determination rule in the Defect Segmentation module is optimized. Click xref:algorithm-modules:defect-segmentation-determination-rule.adoc[here] to view the details.
+The Defect determination rule in the Defect Segmentation module is optimized.
 
 ==== Supported the Setting of Translation in the Fast Positioning Module
 

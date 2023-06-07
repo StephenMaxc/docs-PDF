@@ -2,3 +2,17 @@
 
 This repo is used for generating PDF documents for the site.
 
+== Generate the PDF Document
+
+1. Change directory to the repo.
+
+2. Execute the following command:
++
+----
+npx antora .\site-pdf-en.yml --fetch
+----
+
+3. The generated PDF is in the directory: docs-pdf\build\assembler\dlk-software-manual\2.4.0
+
+
+

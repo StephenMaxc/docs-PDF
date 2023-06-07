@@ -33,7 +33,7 @@
  +
  +
 This feature is for the Defect Segmentation module and the Classification module.
-| xref:algorithm-modules:general-parameters-train.adoc#train-center[Training Center]
+| Training Center
 | Train models in batches
 |===
 
