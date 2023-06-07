@@ -2,9 +2,13 @@
 
 This repo is used for generating PDF documents for the site.
 
+* src: stores all the adoc files and images.
+* docs-pdf: used to generate PDF document. It has all the dependencies installed for PDF generation.
+
+
 == Generate the PDF Document
 
-1. Change directory to the repo.
+1. Change to the `docs-pdf\` directory of the repo.
 
 2. Execute the following command:
 +
