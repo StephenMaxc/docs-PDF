@@ -1,0 +1,99 @@
+[id="codemeter-update-license"]
+
+=  Update Software License
+:imagesdir: ..//../images/
+:experimental:
+:icons: font
+
+CodeMeter will notify you if your license(s) is about to expire. In such case, please contact {company} Technical Support (hereafter referred to as {company}) to request an update.
+
+Once the update has been arranged, you’ll need to export a license request file to send to {company} first. Then, {company} will send back a license update file that extends the duration of your license.
+
+
+==  Export License Request File
+
+
+Before proceeding, please make sure that:
+
+* CodeMeter is installed.
+* License dongle(s) is inserted.
+
+
+
+. Click image:codemeter_icon.png[width=25, fit=line] in the system tray to open CodeMeter Control Center.
+
+. Select the license dongle whose license needs to be updated, and click btn:[License Update].
++
+image::update_license_1.png[align="center"]
+
+. Click btn:[Next] in the pop-up window.
++
+image::update_license_2.png[align="center"]
+
+. Select *Create license request*, and then click btn:[Next].
++
+image::update_license_3.png[align="center"]
+
+. Select *Extend existing license*, and then click btn:[Next].
++
+image::update_license_4.png[align="center"]
+
+. Choose *Mech-Mind* as the vendor, and then click btn:[Next].
++
+image::update_license_5.png[align="center"]
+
++
+NOTE: The company code may differ.
+
+. On the next page, click btn:[..] to select a location for saving the license request file, and then click btn:[Commit].
++
+image::update_license_6.png[align="center"]
++
+TIP: If licenses on multiple license dongles need to be updated, please repeat steps 2 to 7 to export a license request file for each dongle.
+
+. Send the license request file to {company}.
+
+==  Update the License
+
+After you send the license request file, {company} will send back a license update file in WIBUCMRAU format. Double-click this file to update the corresponding license. Follow the steps below to check if the license has been successfully updated.
+
+
+. Click image:codemeter_icon.png[width=25, fit=line] in the system tray to open CodeMeter Control Center.
+
+. Select the license dongle you’d like to check, and then click btn:[WebAdmin] in the lower right.
++
+image::update_license_7.png[align="center"]
+
+. The *CodeMeter WebAdmin* webpage will be opened, and you can check the date under *Valid Until* to see if the license has been updated.
++
+image::update_license_8.png[align="center"]
++
+[NOTE]
+====
+* The *Valid Until* date for a perpetual license is *n/a*.
+* You can select a different license dongle to view by clicking on the btn:[Container] tab at the top.
+====
+
+If for some reason, double-clicking on the WIBUCMRAU file does not update your license, please follow the steps below to manually import the license update file.
+
+. Click image:codemeter_icon.png[width=25, fit=line] in the system tray to open CodeMeter Control Center.
+
+. Select the license dongle whose license needs to be updated, and click btn:[License Update].
++
+image::update_license_1.png[align="center"]
+
+. Click btn:[Next] in the pop-up window.
++
+image::update_license_2.png[align="center"]
+
+. Select *Import license update*, and then click btn:[Next].
++
+image::update_license_9.png[align="center"]
+
+. Click btn:[..] to select the license update file, and then click btn:[Commit].
++
+image::update_license_10.png[align="center"]
+
+
+
+

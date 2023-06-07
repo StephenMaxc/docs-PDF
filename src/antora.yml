@@ -1,0 +1,34 @@
+name: dlk-software-manual
+title: Mech-DLK Software Manual
+version: 2.4.0
+display_version: 2.4.0
+start_page: quick-facts:dlk.adoc
+asciidoc:
+  attributes:
+    xrefstyle: short@
+    listing-caption: Example@
+    release-version: '2.4.0'
+    page-pagination: true
+    lang: en
+    source-highlighter: rouge
+    company: Mech-Mind
+    company-en: Mech-Mind
+    product-system: Mech-System
+    product-vis: Mech-Vision
+    product-viz: Mech-Viz
+    product-center: Mech-Center
+    product-interface: Mech-Interface
+    product-eye: Mech-Eye
+    product-eye-viewer: Mech-Eye Viewer
+    product-eye-sdk: Mech-Eye SDK
+    product-eye-api: Mech-Eye API
+    product-dlk: Mech-DLK
+    product-dlk-sdk: Mech-DLK SDK
+    whetheroem: mechmind
+nav:
+
+- modules/quick-facts/nav.adoc
+# - modules/algorithm-modules/nav.adoc
+# - modules/application/nav.adoc
+# - modules/sdk/nav.adoc
+- modules/appendix/nav.adoc

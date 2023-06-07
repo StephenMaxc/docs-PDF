@@ -1,0 +1,42 @@
+:imagesdir: ..//../images/
+:experimental:
+:icons: font
+
+[id="operation-mode"]
+
+= Perform Dataset Testing in Batches under Operation Mode
+
+== Introduction
+
+You can perform batch-wise testing on the dataset under the *Operation Mode*. This feature is for the Defect Segmentation module and the Classification module. It is unavailable under the cascade mode.
+
+After the model training is complete, click menu:Tools[Operation Mode]. You can turn on the *Operation Mode* to import a large amount of new data for testing and perform manual re-judgment. After the testing is complete, you can output a report, which contains information including accuracy, false positive rate, and false negative rate.
+
+NOTE: The Classification module only presents the accuracy.
+
+== Steps
+
+. *Select Data Source*
++
+If you need to use the operations mode to demonstrate the model effect, select *{product-dlk}* as the data source. If you need to import a large amount of new data for testing, select *Folder* as the data source.
++
+[horizontal,labelwidth=15,itemwidth=85]
+{product-dlk}:: Directly import all image datasets in the current project.
+Folder:: After selecting the image folder path, import all images in the folder as a new dataset. The new dataset imported will be independent of the original datasets in the project.
+
++
+NOTE: Before the Operation Mode is turned on, if some new image data is imported into the project in addition to the training set and validation set of the current project, then when the data source of the Operation Mode is btn:[{product-dlk}], those new image data will also be read.
+
+. *Defect Detection Settings*
++
+Please set each parameter according to the defect judgment standard, and the defect filtering options will be enabled simultaneously in the software. The defect detection settings are independent of the defect judgment rules set for validation of the Defect Segmentation module.
+
+. *Load Model*
++
+Click btn:[Load Model]. After loading successfully, click btn:[Next] to enter the inference interface.
+
+. *Make Reference and Export report*
++
+Click the btn:[Start] button under *Auto infer* to start inference. After the automatic inference is completed, check whether the result is accurate, and click the corresponding button under Manual check. After completing the manual check, click btn:[Export report] to view information including the accuracy, false positive rate, and false negative rate.
+
+NOTE: The Classification module only presents the accuracy.

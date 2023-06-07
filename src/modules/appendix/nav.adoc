@@ -1,0 +1,10 @@
+* Appendix
+
+** xref:user-interface.adoc[]
+*** xref:operation-model.adoc[]
+
+** xref:trial-license.adoc[]
+** xref:update-license.adoc[]
+
+** xref:keyboard-shortcut.adoc[]
+** xref:faq.adoc[]

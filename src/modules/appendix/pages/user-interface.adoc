@@ -1,0 +1,57 @@
+:imagesdir: ..//../images/
+:experimental:
+:icons: font
+
+= Menu Bar
+
+== File
+
+[cols = "1,3", width =70% ]
+|===
+|New Project |Create a new project
+|Open Project |Select and open an existing project folder
+|Save Project |Save changes to the current project
+|Save As |Save the project in a specified location
+|Import |Import images, folders, or datasets into the current project. Under the cascade mode, you can choose to add from the previous module. The source folder shouldn’t be subject to any change during the import procedure of a folder.
+|Export Dataset |Export the dataset of the current project to a specified location. Under the cascade mode, only the dataset of the first module is exported.
+|===
+
+== Edit
+
+[cols = "1,3", width =70% ]
+|===
+|Undo |Undo the **Labeling** action
+|Redo |Redo the action that you’ve undone
+|===
+
+== Tools
+
+[cols = "1,3", width =70% ]
+|===
+|xref:operation-model.adoc#operation-mode[Operation Mode] 
+| You can perform batch-wise testing on the dataset under the Operation Mode.
+ +
+ +
+This feature is for the Defect Segmentation module and the Classification module.
+| xref:algorithm-modules:general-parameters-train.adoc#train-center[Training Center]
+| Train models in batches
+|===
+
+== Settings
+
+[cols = "1,3", width =70% ]
+|===
+|Options |Change the display language and turn on/off the Developer Mode
+|===
+
+== Help
+
+[cols = "1,3", width =70% ]
+|===
+|Manual |Open the web page of Mech-DLK User Manual
+|Quick Guide |Quick guide to start the software
+|What’s New |View the release notes in a web interface
+|Logs |Open the folder containing the running logs
+|Device Check |Check and view the CPU and GPU information of the deployment device
+|About |View the software version
+|===

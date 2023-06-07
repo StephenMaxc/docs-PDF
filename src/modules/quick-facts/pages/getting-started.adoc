@@ -1,0 +1,67 @@
+[id="quick-start"]
+
+= Train Your First Model
+
+:imagesdir: ../images/
+:experimental:
+
+This section shows how to train and export an example deep learning model that can be used for defect segmentation. The data used for training is from an image dataset of Ethernet ports.
+
+== Preparation
+
+Click link:https://docs.mech-mind.net//download/Mech-DLK/DefectDetection(NetworkPort).rar[here] to download the image dataset and unzip the file.
+
+== Training Process
+
+image::flow_chart.png[align="center"]
+
+. *Create a New Project*: Click btn:[New Project] in the interface, name the project, and select a directory to save the project.
++
+image::new_project.png[align="center"]
+
+. *Add the Defect Segmentation Module*: Click image:icon_create.png[width=25,fit=line]btn:[]icon_createbtn:[] to add a module. Select 1Defect Segmentation and then click the OK button.
+
++
+image::add_new_module.png[align="center"]
+
+. *Import Image Data*: Click btn:[Import] in the upper left corner, select btn:[Folder] and import the image dataset you have downloaded.
+
++
+image::import_images.png[align="center"]
+
+. *Labeling*: In this example, you will need to label the OK images and NG images in each dataset. OK means that the connectors meet quality requirements and NG means that there are defects such as deformations and fractures on the Ethernet ports.
+
++
+image::ok_defect_features.png[align="center"]
+
++
+For NG images, long press the left mouse button or right-click image:icon_tool.png[width=25, fit=line] on the toolbar and then use the Brush Tool to select the regions with defects according to their shapes.
++
+image::label_data1.png[align="center"]
++
+image::label_data2.png[align="center"]
++
+Click image:icon_eraser.png[width=25, fit=line] to use the eraser tool to remove the labeled region.
+
++
+For OK images that do not contain any defect, please select the image and then right-click and select btn:[Set to OK]. Please make sure that there is at least one OK image in each dataset.
+
++
+image::label_ok.png[align="center"]
+
+. *Train the Model*: Select *Training* and then click btn:[Train] in the lower right corner of the interface to start training the model.
+
++
+image::training_chart.png[align="center"]
+
+. *Validate the Model*: After the training is completed, click  btn:[Validate] to validate the model and check the results.
+
++
+image::result_verification.png[align="center"]
+
+. *Export*: Click btn:[Export] in the lower right corner of the interface and click btn:[Export] in the pop-up window (the default export parameters can be directly used). Then, select a directory to save the exported model in the dlkpack file.
+
++
+image::model_files.png[align="center"]
+
+Now, you have completed the training of the first model. Continue your reading to learn all the details of modules.

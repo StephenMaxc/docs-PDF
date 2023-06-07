@@ -1,0 +1,27 @@
+:imagesdir: ../images/
+:experimental:
+:icons: font
+
+= Device Requirements
+
+The following software and hardware requirements must be satisfied for the running of {product-dlk}.
+
+[cols="1h,3,3"]
+|===
+|Authorized dongle version | Pro-Run | Pro-Train/Standard
+|Operating system 2+^|Windows 10 or above
+|CPU|Intel® Core™ i5 or above|Intel® Core™ i7 or above
+|Memory |8 GB or above |16 GB or above
+|Graphics card |GeForce GTX 1650 (4GB) or above |GeForce GTX 2070 (8GB) or above
+|Graphics card driver 2+^|Version 472.50 or above
+|===
+
+NOTE: The Pro-Run version features SDK, labeling, and Operation Mode. The Pro-Train version support all features, while the Standard version supports the features of labeling, training, and validation.
+ 
+== Compute Capability Requirements for the Graphics Card
+
+* The computer graphics card’s computation capacity should be at least that of Nvidia GeForce 6.1.
+
+* Click link:++https://developer.nvidia.com/cuda-gpus++[here] to check the compute capability of your GPU:
++
+image::installation_compute_capability.png[align="center"]

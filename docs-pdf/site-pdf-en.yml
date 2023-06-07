@@ -1,0 +1,44 @@
+site:
+  title: Mech-Mind Documentation
+content:
+  sources: 
+  - url: D:\文档维护\docs-PDF
+    start_path: src
+ui:
+  bundle:
+    url: https://docs.mech-mind.net/download/docs-UI/ui-bundle-en.zip
+    snapshot: true
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      languages: [en]
+    - '@antora/pdf-extension'
+asciidoc:
+  attributes:
+    # Site Settings
+    example-caption: ~     # Disable prefixing example captions with "Example X"
+    experimental: ''       # Enable Experimental Mode (necessary for some asciidoc settings)
+    icons: font            # Enable Font Awesome Icons
+    idprefix: ''           # Don't automatically add a prefix to IDs
+    page-pagination: ''    # Enable pagination links
+    sectnums: all             # Enable section numbering
+    sectnumlevels: 5
+    table-caption: ~       # Disable prefixing table captions with "Table X"
+    collapsible: ''        # Enable native collapses
+    toclevels: 4
+    lang: en
+    xrefstyle: basic
+    chapter-signifier:
+    # scripts: cjk
+    pdf-theme: ./_resources/pdf-theme-en.yml
+    pdf-fontsdir: ./_resources/fonts
+output:
+  destinations: []
+  # clean: true
+  # dir: ./build/zh
+  # destinations:
+  # - provider: fs
+  #   path: ./build/zh
+  #   clean: true
+  # - provider: archive
+  #   path: ./build/zh.zip

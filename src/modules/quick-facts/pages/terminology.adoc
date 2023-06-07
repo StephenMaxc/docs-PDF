@@ -1,0 +1,66 @@
+[id="terminology-explanation"]
+
+= Terminology
+
+* ROI
++
+A region of interest (ROI) is a region selected from an image. The region is the focus of the analyses of the images. Selecting regions of interest helps reduce processing time and improve accuracy.
+
+* Labeling
++
+Labeling refers to the process of selecting object features or contours from images and adding labels indicating features or defects to the selections, and the process of adding labels to individual images, thus telling the model what contents it should learn. 
+
+* Dataset
++
+A dataset contains the original data and labels. In {product-dlk}, datasets are saved in dlkdb files.
+
+* Unlabeled data
++
+Original data without labels.
+
+* Training set 
++
+The part of the dataset allocated for model training.
+
+* Validation set 
++
+The part of the dataset allocated for model validation.
+
+* OK image 
++
+In defect defection, an OK image is an image that contains no defects.
+
+* NG image 
++
+In defect detection, an NG image is an image that contains any defects.
+
+* Training 
++
+Training refers to the process of letting the model learn on the training set.
+
+* Validation 
++
+Validation refers to the process of verifying the trained model on the validation set.
+
+* Accuracy 
++
+Accuracy refers to the ratio of the number of correctly predicted samples to the total number of samples in the validation set when validating the trained model.
+
+* Loss 
++
+Loss is a measure of the inconsistency between the model’s predictions on the validation set and the ground truth of the validation set.
+
+* Epochs 
++
+The number of times the model goes through all data in the training set when training. The model completes one epoch when it has gone through all training data once.
+
+* False positive (FP) 
++
+The situation where an image not containing defects is predicted as an image containing defects.
+
+* False negative (FN) 
++
+The situation where an image containing defects is predicted as an image not containing defects.
+
+
+

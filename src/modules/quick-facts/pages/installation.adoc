@@ -1,0 +1,136 @@
+[id="envir-prepare"]
+
+= Installation Guide
+:imagesdir: ..//../images/
+:experimental:
+:dlk-download-url: community.mech-mind.com/c/latest-product-downloads/10
+
+This chapter introduces how to install {product-dlk} and device prerequisites.
+
+== Install {product-dlk}
+
+. Enter https://{dlk-download-url}[{company} Online Community] to download the installation package of {product-dlk}.
+. Double-click the file and install {product-dlk} according to the instructions.
+// +
+// image::installation_successful_1.png[align="center"]
+
+// == 加密狗驱动安装
+
+
+// . 安装加密狗驱动，勾选下图选项，在后续窗口中均单击btn:[下一步]直至安装完成。
+// +
+// image::installation_agree.png[align="center"]
+
+// . 若安装成功，则会出现如下窗口：
+// +
+// image::installation_successful_2.png[align="center"]
+
+
+== Prerequisites for Using the Software
+
+To make sure Mech-Mind software can function properly, please complete the following actions.
+
+
+=== Check Interfaces and Drivers
+
+Check the following in Windows *Control Panel*:
+
+. *Network and Internet*: make sure that the network interfaces used to connect to other devices are functioning properly.
+. *Device Manager*: under btn:[Network adapters] and btn:[Display adapters], make sure the required drivers for your network interfaces and GPU are installed.
+
+=== Set up Software License
+
+{company} uses CodeMeter from Wibu-Systems as the license system for its software. The CodeMeter installer has been included in the software package.
+
+. Plug the license dongle you received into the IPC.
+. Run the CodeMeter installer to install CodeMeter.
+. Make sure that CodeMeter is running: in the system tray, check if the CodeMeter icon image:installation_codemeter_icon.png[width=25, fit=line] is displayed in the Windows tray.
+
+[NOTE]
+====
+* If you need to obtain a trial license that does not require a license dongle, please click xref:appendix:trial-license.adoc[Obtain a Trial Software License].
+* If you need to update an existing license, please click xref:appendix:update-license.adoc[Update Software License].
+====
+
+=== Turn off Windows Defender Firewall
+
+The Windows Defender Firewall might block the normal communication between Mech-Mind software and devices connected to the IPC. Therefore, it is necessary to turn off Windows Defender Firewall’s protection for the network interfaces connected to devices that communicate with the software. Follow these steps:
+
+. Open the control panel, and click menu:System and Security[Windows Defender Firewall> Advanced Settings].
++
+image::installation_firewall_1.png[align="center"]
+
+. In the pop-up window, click *Windows Defender Firewall Properties.* .
++
+image::installation_firewall_2.png[align="center"]
+
+. Under the *Domain Profile* tab, click btn:[Customize…] next to *Protected network connections*.
++
+image::installation_firewall_3.png[align="center"]
+
+. In the pop-up window, uncheck all the network interfaces connected to devices that communicate with the software. Then, click btn:[OK].
++
+image::installation_firewall_4.png[align="center"]
+
+. Repeat the above two steps for the *Private Profile* and *Public Profile* tabs.
++
+image::installation_firewall_5.png[align="center"]
+
+=== Prevent Windows from Updating (Recommended)
+
+Windows updates might force the IPC to shut down/restart during production in order to complete the updates, which would end the software and thus affect normal production. Therefore, it is highly recommended to prevent Windows from updating to avoid unexpected shutdown.
+
+NOTE: If you choose to keep Windows Update enabled, please take measures to ensure that IPC shutdown/restart occurs during planned downtime, such as setting active hours for Windows Update.
+
+==== Disable Windows Update
+
+. Click the magnifying glass icon in the taskbar, and search for *Services*.
+. Click *Services* in the search results to open it, and scroll down to find *Windows Update*.
++
+image::installation_update_1.png[align="center"]
+
+. Click btn:[OK] after clicking the Stop button.
++
+image::installation_update_2.png[align="center"]
+
+. In the drop-down menu of *Startup type*, select *Disabled*, and then click btn:[Apply].
++
+image::installation_update_3.png[align="center"]
+
+. Click the *Recovery* tab, and change the response for all failures to *Take No Action*. Then, click btn:[OK].
++
+image::installation_update_4.png[align="center"]
+
+==== Disable Windows Update Medic Service
+
+Windows Update Medic Service fixes problems in Windows Update and ensures that your computer continues to receive updates. That is, even if you have disabled Windows Update, Windows Update Medic Service will eventually re-enable it. Therefore, it is necessary to disable Windows Update Medic Service as well.
+
+Windows does not allow you to disable Windows Update Medic Service through simple button-clicking. To disable it, you’ll need to go to the Registry Editor as instructed below.
+
+. Click the magnifying glass icon in the taskbar, and search for “regedit”. Click *Registry Editor* in the search result to open it.
+
+. In the left pane, navigate to *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc*. Then in the right pane, right-click *Start* and select *Modify*.
++
+image::installation_update_5.png[align="center"]
+
+. In the pop-up window, change *Value data* to 4, and then click btn:[OK].
++
+image::installation_update_6.png[align="center"]
+
+. Right-click *FailureActions* and select *Modify*.
++
+image::installation_update_7.png[align="center"]
+
+. In the pop-up window, change the values (whose positions are shown in the middle box of the following figure) to *01*. Then, click btn:[OK].
++
+image::installation_update_8.png[align="center"]
+
+. Return to *Services*, find *Windows Update Medic Service* and double-click to open it.
+// +
+// image::installation_update_9.png[align="center"]
+
+. The Startup type in the General tab should be Disabled, and all responses for failures in the Recovery tab should be Take No Action.
++
+image::installation_update_10.png[align="center"]
+
+Now, you can start to use {product-dlk}.

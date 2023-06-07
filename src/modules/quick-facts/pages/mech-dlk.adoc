@@ -1,0 +1,101 @@
+[id="quick-facts"]
+
+= About \{product-dlk}
+
+:imagesdir: ..//../images
+
+\{product-dlk} is a machine vision deep learning software self-developed by \{company} Robotics. With a variety of built-in industry-leading deep learning algorithms, it can solve many problems that traditional machine vision cannot handle, such as highly difficult segmentation, positioning and classification.
+
+Through intuitive and simple UI interactions, even without programming or specialized deep learning knowledge, users can quickly implement model training and validation with \{product-dlk}.
+
+image::dlk_flow_chart.png[align="center"]
+
+The software includes five algorithm modules: Fast Positioning, Defect Segmentation, Classification, Object Detection, and Instance Segmentation.
+
+// image::quick_location.png[align="center"]
+
+== Fast Positioning
+
+*Recognize the object orientation in an image and correct the image based on the recognition result. *
+
+The module is used to correct object image orientations. It runs fast and is usually used as a preceding module for other algorithm modules.
+
+* Recognize workpiece orientations in images and rotate the images to a specified orientation.
+
+image::quick_location_1.png[align="center"]
+
+// image::defect_segementation.png[align="center"]
+
+== Defect Segmentation
+
+*Determine whether an image is OK or NG. If it is NG, segment the defect region(s). *
+
+The module is used to detect various types of defects,  including surface defects such as stains, bubbles, scratches, etc., and positional defects such as bending, abnormal shape, absence, etc. It can be applied in complex situations such as small defects, complex backgrounds, and unstable workpiece positions.
+
+* Detect air bubbles and glue spill defects on the lens surface.
+
+image::defection_1.png[align="center"]
+
+* Detect bending defects of workpieces.
+
+image::defection_2.png[align="center"]
+
+// image::classification.png[align="center"]
+
+== Classification
+
+*Recognize object classes in images. *
+
+The module is used to recognize workpiece front and back faces, workpiece orientations, and defect types, and to recognize whether objects are missing, or whether objects are neatly arranged.
+
+* Recognize whether workpieces are neatly arranged or scattered.
+
+image::classification_1.png[align="center"]
+
+* Recognize the fronts and backs of workpieces.
+
+image::classification_2.png[align="center"]
+
+// image::detection.png[align="center"]
+
+== Object detection
+
+*Detect the positions of all target objects and recognize their categories at the same time. *
+
+This module is used to detect the absence of workpieces of fixed position, such as missing components in a PCB; it can also be used for object counting. Even for hundreds or thousands of objects, the module can quickly perform locating and counting.
+
+* Detect rotors that overlap each other.
+
+image::detection_1.png[align="center"]
+
+* Count all rebars.
+
+image::detection_2.png[align="center"]
+
+// image::instance_segmentation.png[align="center"]
+
+== Instance Segmentation
+
+*Recognize the contour and class of each target object. *
+
+This module can produce more refined segmentation results than the module Object Detection. The module can recognize single or multi-class objects and segment the corresponding contours. It is used for depalletizing and palletizing, machine tending, piece picking, etc., and it cooperates with \{product-vis} and \{product-viz} to complete object picking.
+
+* Segment blocks of various types.
+
+image::instance_segmentation_1.png[align="center"]
+
+* Segment scattered and overlapping chain links.
+
+image::instance_segmentation_2.png[align="center"]
+
+* Segment cartons placed tightly and parallelly together.
+
+image::instance_segmentation_3.png[align="center"]
+
+
+
+
+
+
+
+

@@ -1,0 +1,238 @@
+extends: default
+font:
+  catalog:
+    merge: true
+    Roboto Mono:
+      normal: RobotoMono-Light.ttf
+      bold: RobotoMono-Regular.ttf
+      italic: RobotoMono-LightItalic.ttf
+      bold_italic: RobotoMono-Italic.ttf
+    Roboto:
+      normal: Roboto-Light.ttf
+      bold: Roboto-Regular.ttf
+      italic: Roboto-LightItalic.ttf
+      bold_italic: Roboto-Italic.ttf
+  fallbacks:
+  - Arial
+  - Noto Serif
+  - Helvetica
+  - Courier
+  - Times-Roman
+
+#设置页面的效果，大小，边界，背景色等
+page:
+  background_color: ffffff
+  layout: portrait
+  margin: [1in, 1in, 1in, 1in]
+  # margin_inner and margin_outer keys are used for recto/verso print margins when media=prepress
+  margin_inner: 0.75in
+  margin_outer: 0.59in
+  size: A4
+
+#base是设置默认字体和段落的效果
+base:
+  text-align: left
+  font-color: 333333
+  # font-color: #000000
+  font-family: Roboto
+heading:
+  font-color: #000000  
+codespan:
+  font-family: Roboto Mono
+button:
+  font-style: bold
+menu:
+  font-style: bold_italic
+code:
+  font-family: Roboto Mono
+  font-size: 9
+kbd:
+  font-style: bold
+  border-color: CCCCCC
+  border-width: 0.375
+
+
+#禁用标题页。
+# title_page: false
+#设置标题页的效果。
+title_page:
+  # background-image: image:cover.png[]
+  text-align: center
+  #设置logo
+  logo:
+    top: 10%
+    #图片要放在ruby30\lib\ruby\gems\3.0.0\gems\asciidoctor-pdf-1.5.0.alpha.16\data\themes目录下
+    image: image:logo.png[width=400]
+  #设置标题的效果
+  title:
+    top: 35%
+    font_size: $heading_h1_font_size * 1.2
+    font_color: 051648
+    font_style: bold
+    line_height: 1.2
+
+# #设置封皮
+# cover:
+#   front:
+#     image: image:cover.pdf[]
+#   back:
+#     image: image:backcover.pdf[]
+
+# 设置标题样式
+heading:
+  h2-font-color: 001a48
+  h2-border-width: [0, 0, 2, 0]
+  h2-margin-page-top: 20
+  h2-margin-bottom: 10
+  h2-text-align: left
+
+#设置注意的效果
+admonition:
+  column_rule_color: $base_border_color
+  column_rule_width: $base_border_width
+  font_family: $base_font_family
+  font_size: $base_font_size_small
+  padding: [0, $horizontal_rhythm, 0, $horizontal_rhythm]
+  #icon:
+  #  tip:
+  #    name: fa-lightbulb-o
+  #    stroke_color: 111111
+  #    size: 24
+  label:
+    text_transform: uppercase
+    font_style: bold
+
+#设置图片的效果
+image:
+  width: 70%
+  align: center
+  border-fit: auto
+  caption:
+    align: center
+    end: bottom
+
+role:
+  red:
+    font-color: FF0000
+  underline: true
+  line-through: true
+
+# ulist:
+#   marker:
+#     disc:
+#       font-family: $base_font_family
+#       font-size: 25
+#       font-color: 333333
+#       font-style: bold
+#       # line-height: 0.5
+
+olist:
+  marker:
+    font-family: $base_font_family
+    font-color: 333333
+    font-style: bold
+    line-height: 1.2
+
+admontition:
+  border-color: 333333
+  border-radius: 4
+  border-style: solid
+  border-width: 0.5
+
+description_list:
+  term_font_style: bold
+  term_spacing: $vertical_rhythm / 4
+  description_indent: $horizontal_rhythm * 1.25
+
+#设置表格的效果
+table:
+  background_color: ffffff
+  head_background_color: BEBEBE
+  head_font_style: bold
+  body_stripe_background_color: D3D3D3
+  border_color: dddddd
+  border_width: $base_border_width * 1.25
+  cell_padding: 1.5
+  #设置标注的位置和对齐方式
+  caption:
+    end: top
+    align: center
+
+common:
+    company: Mech-Mind Robotics Technologies Ltd.
+    year: '{localyear}'
+running-content:
+  start-at: body
+
+#设置页眉效果
+header:
+  height: $base_line_height_length * 4
+  border_color: dddddd
+  border_width: 0.25
+  line_height: 1
+  vertical_align: bottom
+  padding: [0, 0, 3, 0]
+  #image_vertical_align: <alignment> or <number>
+  # additional attributes for content:
+  # * {page-count}
+  # * {page-number}
+  # * {document-title}
+  # * {document-subtitle}
+  # * {chapter-title}
+  # * {section-title}
+  # * {section-or-chapter-title}
+  #设置奇数页页眉
+  recto:
+    #columns: "<50% =0% >50%"
+    #设置左边logo，右边章节标题
+    left:
+      content: image:logo.png[width=120]
+    right:
+      content: '{document-title}'
+  #设置偶数页页眉
+  verso:
+    left:
+      content: '$header_recto_left_content'
+    right:
+      content: '$header_recto_right_content'
+#设置页脚效果
+footer:
+  font_size: $base_font_size_small
+  # NOTE if background_color is set, background and border will span width of page
+  border_color: dddddd
+  border_width: 0.25
+  height: $base_line_height_length * 4
+  line_height: 1
+  padding: [$base_line_height_length / 2, 1, 0, 1]
+  vertical_align: top
+  #image_vertical_align: <alignment> or <number>
+  # additional attributes for content:
+  # * {page-count}
+  # * {page-number}
+  # * {document-title}
+  # * {document-subtitle}
+  # * {chapter-title}
+  # * {section-title}
+  # * {section-or-chapter-title}
+  #设置奇数页页脚，左边页数，右边总页数，中间版权信息。
+  recto:
+    #columns: "<50% =0% >50%"
+    left:
+      content: '(C) $common_year $common_company'
+    right:
+      content: '{page-number}'
+      #content: '{section-or-chapter-title} | {page-number}'
+      #content: '{document-title} | {page-number}'
+    # center:
+    #   content: '$common_year (C) $common_company'
+  #设置偶数页页脚
+  verso:
+    #columns: $footer_recto_columns
+    left:
+      content: '$footer_recto_left_content'
+      #content: '{page-number} | {chapter-title}'
+    right:
+      content: '$footer_recto_right_content'
+      #content: '{page-number} | {chapter-title}'
+    # center:
+    #   content: '$footer_recto_center_content'

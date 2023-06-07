@@ -1,0 +1,8 @@
+* Getting Started
+
+** xref:dlk.adoc[]
+** xref:release-notes.adoc[]
+** xref:requirments.adoc[]
+** xref:installation.adoc[]
+** xref:terminology.adoc[]
+** xref:getting-started.adoc[]

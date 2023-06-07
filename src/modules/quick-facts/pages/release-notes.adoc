@@ -1,0 +1,128 @@
+= Release Notes
+:imagesdir: ../images/
+:experimental:
+
+== {product-dlk} V2.4.0
+
+=== New Features
+
+==== Added the Cascade Mode
+
+{product-dlk} V2.4.0 has added a brand-new cascade mode of modules, which enables the combination of modules to solve deep learning problems in complex scenarios. It should be noted that when the Fast Positioning module is involved, it must be the first module. For example, when you need to detect the positions of defects and classify these defects, you can first add a Defect Segmentation module and then add a Classification module. In addition, when import data from the previous module, you can select images according to actual needs and configure the import of these images in the Import window.
+
+==== Added the Training Center
+
+The Training Center supports the training of models in a queue, which is suitable for scenarios requiring the training of multiple models. With the Training Center, the software can train models in sequence, no need of manual clicking of Train repeatedly, which can save a huge amount of time.
+
+==== Added the Mask Type of Mask Globally and Supported Custom Mask Fill
+
+In the Defect Segmentation module, when you select the Mask Polygon Tool, the mask type can be Mask single image or Mask globally. In addition, you can customize the mask color.
+
+* Mask single image: The mask is only displayed in the current image. It is only valid in training.
+* Mask globally: After a mask is drawn in the current image, the mask will be displayed in all images. The mask is valid in both training and validation.
+
+==== Added the Window of Keyboard Shortcuts
+
+Click image:keyboard-shortcut-keyboard.png[width=25,fit=line] in the lower right corner of the selection region to open the window of keyboard shortcuts.
+
+==== Added Auxiliary Labeling Lines for Rectangle Tool
+
+In the Instance Segmentation and Object Detection modules, auxiliary labeling lines are added for the Rectangle Tool to make rectangular selections on images.
+
+==== Added the Display and Filtering of Validation Result Confidence
+
+In the Instance Segmentation and Object Detection modules, a confidence filtering function is added for validation results. You can adjust the confidence to filter the validation results and then evaluate the accuracy of models.
+
+=== Improvements
+
+==== Optimized the Classification Module
+
+The Classification module is optimized, which leads to faster training convergence and a growth rate of 20% in accuracy under complex scenarios.
+
+==== Optimized {product-dlk-sdk}
+
+{product-dlk-sdk} is more stable and easier to use after reconstruction.
+{product-dlk-sdk} supports the inference of cascading modules and the switching among different operation hardware. In addition, it provides richer samples.
+
+==== Optimized the Setting of Defect Determination Rule
+
+The Defect determination rule in the Defect Segmentation module is optimized. Click xref:algorithm-modules:defect-segmentation-determination-rule.adoc[here] to view the details.
+
+==== Supported the Setting of Translation in the Fast Positioning Module
+
+In the Image Adjustment window of the Fast Positioning module, you can translate the image along the X and Y axes. After training, images with objects in specified positions and orientations will be generated for application in more scenarios.
+
+==== Optimized the Template Tool
+
+In the Instance Segmentation and Object Detection modules, after selecting the Template Tool, press and hold the Shift key and scroll the mouse wheel to adjust the angle of the template. You can also set the Rotation angle to achieve the same purpose.
+
+
+== Release Notes of Previous Versions
+
+.Click here to view the {product-dlk} V2.3.0 release notes
+[%collapsible]
+====
+
+*{product-dlk} V2.3.0 Release Notes*
+
+* Graphics Card Driver Requirement
++
+Before using {product-dlk} V2.3.0, please upgrade the graphics card driver to 472.50 or above.
+
+* Improved the Training Speed
++
+Optimized the algorithms, and thus significantly improved the speed of model training. Only the optimal model is saved during training, and the training cannot be stopped halfway.
+
+* Added the Smart Labeling Tool
++
+For modules including Defect Segmentation, Instance Segmentation, and Object Detection, you can do smart labeling by selecting the Smart Labeling Tool, clicking the objects to be labeled, right-clicking to undo the redundant selection, and pressing the Enter key to complete the labeling.
+
+* Added the Function of Adding/Removing Vertices for the Polygon Tool
++
+For the Instance Segmentation and Object Detection modules, after labeling with the Polygon Tool, if the selection needs to be modified, you can left-click the line segment between two vertices to add a vertice, or right-click a vertice to remove it.
+
+* Added the Template Tool
++
+For the Instance Segmentation and Object Detection modules, you can use the Template Tool to set the selection as a template. The template can be applied by simply clicking the images. It is suitable for scenarios where there are multiple neatly-arranged objects of the same type in an image, and it improves labeling efficiency.
+
+* Added the Function of Preview by Zooming
++
+Support previewing full images and cropped cell images.
+
+* Optimized the Grid Cutting Tool
++
+Optimized the Grid Cutting Tool. After cutting the image by the grid, you can select a cell image by checking the box in the upper left corner of the cell image, and you can preview the image by clicking on the button in the upper right corner of the cell.
+
+* Optimized the Data Filtering Mechanism
++
+Added options for filtering results: “Correct results”, “Wrong results”, “False negative”, and “False positive”. Added options for filtering data types: “Labeled as OK” and “Labeled as NG”.
+
+* Built-in Deep Learning Environment
++
+The deep learning environment is built into the software {product-dlk}, and the models can be trained without a separately installed environment.
+
+====
+
+.Click here to view {product-dlk} V2.2.1 release notes
+[%collapsible]
+====
+
+*{product-dlk} V2.2.1 Release Notes*
+
+* Added the Function of Showing the Class Activation Maps for Module Classification
++
+After the model is trained, click btn:[Generate CAM]. The class activation maps show the weights of the features in the form of heat maps; the model classifies an image into its class according to these features. Image regions with warmer colors have higher weights for classifying the image into its class.
+
+* Supported Validation and Export of CPU Models
+
+** *Classification and Object Detection*: After training is completed, select the deployment device as CPU or GPU before exporting the model.
+
+** *Instance Segmentation*: Before training the model, set the training parameters. When exporting a model, select the deployment device as CPU/GPU:
+
+*** CPU lightweight model: Before training the model, set the training parameter *Model type* to *Lite (better with CPU deployment)*. When exporting the model for deployment, set *Deployment device* to *CPU* or *GPU*.
+
+*** GPU standard model: Before training the model, set the training parameter *Model type* to *Normal (better with GPU deployment)*. When exporting the model for deployment, set *Deployment device* to *GPU*.
+
+====
+
+

@@ -1,0 +1,70 @@
+= Keyboard Shortcuts
+:icons: font
+:imagesdir: ..//../images/
+:experimental:
+
+In the lower right corner of the selection region, click image:keyboard-shortcut-keyboard.png[width=25, fit=line] to open the floating window of keyboard shortcuts.
+The window can be placed anywhere on the interface and will not be hidden during other operations. Click btn:[×], click image:keyboard-shortcut-keyboard.png[width=25, fit=line], or press kbd:[Esc] on the keyboard to close the floating window. In addition, you can hover over the buttons of labeling tools to view the corresponding keyboard shortcuts.
+
+NOTE: All the keyboard shortcuts work in both lowercase and uppercase letters.
+
+== Project
+[cols="1,1",options="header"]
+|===
+|Feature |Shortcut
+|New Project |Ctrl + N 
+|Save Project |Ctrl + S 
+|Open Project |Ctrl + O 
+|===
+
+== Labeling
+[cols="1,1,2",options="header"]
+|===
+|Feature |Shortcut |Description
+|Undo labeling |Ctrl + Y |
+|Redo labeling |Ctrl + Z |
+|Copy labeling |Ctrl + C |
+|Paste labeling |Ctrl + V |
+|Select all labeling |Ctrl + A |
+|Delete labeling |Delete |Please move the cursor to the labeling section and select the labeling region to delete
+|Clear labels of the current image |Ctrl + D
+|===
+
+== Tools
+[cols="1,1",options="header"]
+|===
+|Feature |Shortcut 
+|Ellipse Tool |L
+|Polygon Tool |P 
+|Finish polygon selection |Enter 
+|Rectangle Tool |R 
+|Brush Tool |B 
+|Autofill Lasso Tool |A 
+|Labeling Eraser Tool |E 
+|Auxiliary Labeling Tool |T 
+|Smart Labeling Tool |M 
+|Apply current smart labeling |Enter 
+|Cancel current smart labeling |Q 
+|Mask Polygon Tool |Shift + P 
+|Mask Brush Tool |Shift + B 
+|Mask Lasso Tool |Shift + A 
+|Mask Eraser Tool |Shift + E 
+|Template Tool |C 
+|Select template |Ctrl + left click 
+|Grid Cutting Tool |U 
+|Grid Selection Tool |I 
+|Feature Group Labeling Tool |F 
+|ROI Tool |O 
+|Selection Tool |S 
+|Adjust Template Tool/Brush size |⬅, ➡ 
+|Switch between neighboring images |⬆, ⬇ 
+|===
+
+== Label
+[cols="1,1,2",options="header"]
+|===
+|Feature |Shortcut |Description
+|Switch labeling display |Ctrl + L |
+|Switch prediction display |Ctrl + P |
+|Delete dataset image |Delete | Please move the cursor to the dataset section and select the image to delete
+|===

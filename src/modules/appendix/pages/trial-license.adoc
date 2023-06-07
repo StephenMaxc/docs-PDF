@@ -1,0 +1,41 @@
+[id="codemeter-trial-license"]
+
+=  Obtain a Trial Software License
+:imagesdir: ..//../images/
+:experimental:
+
+{company} uses CodeMeter from Wibu-Systems as the license system for its software. We provide trial software licenses that do not require a license dongle.
+
+==  Obtain a Ticket
+
+Please contact {company} Sales to obtain a *ticket* code before proceeding. The ticket code sent to you via email is a 25-character string made up of numbers, alphabets, and hyphens.
+
+==  Install CodeMeter
+
+Please run the CodeMeter installer received from Mech-Mind to install CodeMeter.
+
+==  Activate the License
+
+Please activate the license in link:++http://license.mech-mind.net/index.php++[Mech-Mind License WebDepot].
+
+The activation process is as follows:
+
+. Copy and paste the ticket code into the *Ticket field*, and click btn:[Next].
++
+image::trial_license_1.png[align="center"]
+
+. Select the license and click btn:[Activate Selected Licenses Now] to download the license.
++
+image::trial_license_2.png[align="center"]
+
+. Once downloaded, the following information will be displayed, and then click btn:[OK].
++
+image::trial_license_3.png[align="center"]
+
+. Open CodeMeter Control Center, and you should see the license displayed.
++
+image::trial_license_4.png[align="center"]
+
+
+
+

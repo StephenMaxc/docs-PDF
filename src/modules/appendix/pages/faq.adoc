@@ -1,0 +1,45 @@
+[id="faq"]
+
+=  FAQ
+
+How to troubleshoot the reason why a defect segmentation model is not effective?::
+.. Check the labels for errors.
+.. Check that all kinds of defects are included in the training set.
+.. Check that the input image size is reasonable. If the defect is too small it may not be effective for training the model.
+Does it work if I simulate changes in lighting conditions during data collection by manually adjusting the camera exposure or adding supplemental light?::
+No. Simulated lighting conditions may not reflect the actual conditions accurately, and thus image data collected under such conditions cannot provide accurate object features to train the model. Therefore, if the lighting conditions on-site change over the day, please collect image data respectively under different conditions.
+The camera is fixed, and the incoming objects’ positions vary slightly. Does it work if I simulate the position changes of the objects by moving the camera during data collection?::
+No. The camera should be fixed in position before any data collection. Moving the camera during data collection will affect the extrinsic parameters of the camera and the training effect. Setting a larger ROI can help fully capture the changes in object position.
+If the previously used camera has unsatisfactory imaging quality and is replaced by a new camera, is it necessary to add the images taken by the old camera to the dataset?::
+No. After camera replacement, all data used for model training should come from the new camera. Please conduct data collection again using the new camera and use the data for training.
+Will changing the background affect model performance?::
+Yes. Changing the background will lead to recognition errors, such as false recognition or failure to recognize a target object. Therefore, once the background is set in the early stage of data collection, it is best not to change the background afterward.
+Does it work if I use the image data collected with different camera models at different heights together to train one model?::
+Yes, but please work on the ROI settings. Select different ROIs for images taken at different heights to reduce the differences among images.
+For highly reflective metal parts, what factors should I consider during data collection?::
+Please avoid overexposure and underexposure. If overexposure in parts of the image is inevitable, make sure the contour of the object is clear.
+If the model performs poorly, how to identify the possible reasons?::
+Factors to consider: quantity and quality of the training data, data diversity, on-site ROI parameters, and on-site lighting conditions.
++
+.. Quantity: whether the quantity of training data is enough to make the model achieve good performance.
+.. Quality: whether the data quality is up to standard, whether images are clear enough and are not over-exposed/under-exposed.
+.. Data diversity: whether the data cover all the situations that may occur on-site.
+.. ROI parameters: whether the ROI parameters for data collection are consistent with those for the actual application.
+.. Lighting conditions: Whether the lighting conditions during the actual application change, and whether the conditions are consistent with those during data collection.
+How to improve unstable model performance due to complicated on-site lighting conditions, e.g., objects are covered by shadows?::
+Please add shading or supplemental light as needed.
+Why does the inconsistency between the ROI settings of on-site data and training data affect the confidence values of instance segmentation?::
+The inconsistency will result in objects being out of the optimal recognition range of the model, thus affecting the confidence. Therefore, please keep the ROI settings of the on-site data and training data consistent.
+What is the Super Model for boxes?::
+The Super Model for boxes (click link:++https://docs.mech-mind.net//download/Mech-DLK/finetune_models.rar++[here] to download) is provided for carton palletizing and depalletizing. It can be used directly for most project sites to correctly segment most cartons without collecting additional image data or training.
+What scenarios is the Super Model for boxes suitable for?::
+It is suitable for palletizing/depalletizing boxes of single or multiple colors and surface patterns. However, please note that this Super Model is only applicable to boxes placed in horizontal layers and not at an angle to the ground.
+How to collect data for the Super Model for boxes?::
+Please test the Super Model first. If it cannot segment correctly sometimes, collect about 20 images of situations where the model does not perform well and train the Super Model.
+ROI position deviations may occur when opening old projects with the newer-version {product-dlk}.::
+The ROI will be corrected after clicking on btn:[Validate].
+When training a model in {product-dlk}, what should I do if the error message “ModuleNotFoundError: No module named ‘onnxruntime’” shows?::
+Go to the “users” folder in OS (C:) and open the folder of the current user of the computer.
+Check if the folder “AppData/Roaming/Python/Pythong36/site-packages” is empty. If not, please delete all contents in the folder.
+Whether AMD CPUs can run CPU models?::
+AMD CPUs do not support running CPU models.
